@@ -15,16 +15,16 @@ border-bottom: var(--color-grey-light-2);
 }
 
 .content{
-display: flex;
+display: flex; //padre
 
 }
 
 .sidebar{
 background-color: var(--color-grey-dark-1);
-flex:0 0 18%;
+flex:0 0 18%; //diciamo che la sidebar non cresce e non decrementa e che è larga 18%
 }
 
 .hotel-view{
     background-color: #fff;
-    flex:1;
+    flex:1; //con flex 1 essa cresce di 1 andando a prendersi tutto lo spazio rimasto,ovvero l' 82% (100%-18 della sidebar)
 }
