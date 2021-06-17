@@ -300,9 +300,10 @@
   color: var(--color-grey-dark-3);
   display: flex;
   align-items: center;
+  //justify-content: space-between;
 
   &__count {
-    margin-right: auto;
+    margin-right: auto; /*alternativa :justify content between nel recommend riga 303*/
   }
   &__photo {
     height: 4rem;
