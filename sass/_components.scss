@@ -11,16 +11,16 @@
 .search {
   flex: 0 0 40%;
   display: flex; //un item diventa contenitore
-  align-items:center;
+  align-items: center;
   justify-content: center;
- 
+
   &__input {
     font-family: inherit;
     font-size: 1.4rem;
     color: inherit;
     background-color: var(--color-grey-light-2);
     border: none;
-    padding: .7rem 2rem;
+    padding: 0.7rem 2rem;
     border-radius: 100px;
     width: 90%;
     transition: all 0.2s;
@@ -50,7 +50,7 @@
     //per le imamgini svg è consigliabile dare la stessa dimensione a larghezza e altezza
     width: 2rem;
     height: 2rem;
-    fill:var(--color-grey-dark-2) //permette di colorare le svg
+    fill: var(--color-grey-dark-2); //permette di colorare le svg
   }
 }
 
@@ -58,49 +58,46 @@
 //USER NAVIGATION
 
 .user-nav {
+  display: flex; //un item diventa contenitore
+  align-items: center;
+  align-self: stretch;
 
-    display: flex; //un item diventa contenitore
-    align-items:center;
-    align-self: stretch;
-    
-  
-    & > * { //tutti i figli di user nav
-        padding: 0 2rem;
-        cursor: pointer;
-        height: 100%;
-        display: flex; //facciamoli diventare container
-        align-items: center;
+  & > * {
+    //tutti i figli di user nav
+    padding: 0 2rem;
+    cursor: pointer;
+    height: 100%;
+    display: flex; //facciamoli diventare container
+    align-items: center;
   }
 
   & > *:hover {
     background-color: var(--color-grey-light-2);
-}
+  }
 
-    
   &__icon-box {
-     position: relative;
+    position: relative;
   }
 
   &__icon {
     width: 2.25rem;
     height: 2.25rem;
     fill: var(--color-grey-dark-2);
-  
   }
 
   &__notification {
-      font-size: .8rem;
-      height: 1.75rem;
-      width: 1.75rem;
-      border-radius: 100px;
-      background-color: var(--color-primary);
-      color:#fff;
-      position: absolute;
-      top: 1.5rem;
-      right: 1.1rem;
-      display: flex; //centriamo il numero
-      justify-content: center;
-      align-items: center;
+    font-size: 0.8rem;
+    height: 1.75rem;
+    width: 1.75rem;
+    border-radius: 100px;
+    background-color: var(--color-primary);
+    color: #fff;
+    position: absolute;
+    top: 1.5rem;
+    right: 1.1rem;
+    display: flex; //centriamo il numero
+    justify-content: center;
+    align-items: center;
   }
 
   &__user-photo {
@@ -110,67 +107,160 @@
   }
 }
 
-
-
 //////////////////////////////////////////
 //SIDE NAVBAR
 
-.side-nav{
-    font-size: 1.4rem;
-    list-style: none;
-    margin-top: 3.5rem;
+.side-nav {
+  font-size: 1.4rem;
+  list-style: none;
+  margin-top: 3.5rem;
 
-    &__item{
-        position: relative;
-        &:not(:last-child){
-            margin-bottom: .5rem;
-        }
+  &__item {
+    position: relative;
+    &:not(:last-child) {
+      margin-bottom: 0.5rem;
     }
+  }
 
-    &__item::before{
-        content:"";
-        position: absolute;
-        top: 0;
-        left: 0;
-        height: 100%;
-        width: 3px;
-        background-color: var(--color-primary);
-        transform: scaleY(0);
-        transition: transform 1s;
-    }
+  &__item::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 3px;
+    background-color: var(--color-primary);
+    transform: scaleY(0);
+    transition: transform 1s;
+  }
 
-    &__item:hover::before{
-        transform: scaleY(1);
-        width: 100%;
-        color: #fff;
-    }
+  &__item:hover::before {
+    transform: scaleY(1);
+    width: 100%;
+    color: #fff;
+  }
 
-    &__link:link,
-    &__link:visited{
-        color:var(--color-grey-light-1);
-        text-decoration:none;
-        text-transform: uppercase;
-        display: block;
-        padding:1.5rem 3rem;
-        display: flex;
-        align-items: center;
-        position: relative;
-        z-index: 10;
-    }
-    &__icon{
-        width: 1.75rem;
-        height: 1.75rem;
-        margin-right:2rem;
-        fill:currentColor;
-    }
+  &__link:link,
+  &__link:visited {
+    color: var(--color-grey-light-1);
+    text-decoration: none;
+    text-transform: uppercase;
+    display: block;
+    padding: 1.5rem 3rem;
+    display: flex;
+    align-items: center;
+    position: relative;
+    z-index: 10;
+  }
+  &__icon {
+    width: 1.75rem;
+    height: 1.75rem;
+    margin-right: 2rem;
+    fill: currentColor;
+  }
 }
 
 //////////////////////////////////////////
 //LEGAL TEXT
 
-.legal{
-font-size: 1.2rem;
-color:var(--color-grey-light-4);
-text-align: center;
-padding:2.5rem;
+.legal {
+  font-size: 1.2rem;
+  color: var(--color-grey-light-4);
+  text-align: center;
+  padding: 2.5rem;
+}
+
+.gallery {
+  display: flex;
+
+  &__photo {
+    width: 100%;
+    display: block;
+  }
+}
+
+.overview {
+  display: flex;
+  align-items: center;
+  border-bottom: 1px solid var(--color-grey-light-2);
+  &__heading {
+    font-size: 2.25rem;
+    font-weight: 300;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    padding: 1.5rem 3rem;
+  }
+
+  &__stars {
+    flex: 1; //siccome ne vogliamo 2 a sx e 2 a dx, flex 1 fa si che cresca e prenda tutto la larghezza disponibile finche non trova un item
+    /*in alternativa possiamo usare margin right auto (meglio in quanto prende solo lo spazio dell elemento e non tutta la larghezza disponibile) */
+  }
+
+  &__icon-star,
+  &__icon-location {
+    width: 1.75rem;
+    height: 1.75rem;
+    fill: var(--color-primary);
+  }
+  &__location {
+    font-size: 1.2rem;
+    display: flex;
+    vertical-align: center;
+  }
+  &__icon-location{
+    margin-right: .5rem;
+  }
+
+  &__rating {
+    background-color: var(--color-primary);
+    color: white;
+    margin-left: 3rem;
+    align-self: stretch;
+    padding: 1.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+  }
+  &__rating-average {
+    font-size: 2.25rem;
+    font-weight: 300;
+  }
+  &__rating-count {
+    font-size: .8rem;
+    text-transform: uppercase;
+  }
+}
+ 
+.btn-inline {
+  border: none;
+  color: var(--color-primary);
+  font-size: inherit;
+  border-bottom: 1px solid currentColor;
+  padding-bottom: 2%;
+  background-color: transparent;
+  display: inline-block;
+  cursor: pointer;
+  transition: all 0.2s;
+
+  &:hover {
+    color: var(--color-grey-dark-1);
+  }
+
+  &:focus {
+    outline: none;
+    animation: pulsate 1s infinite;
+  }
+}
+
+@keyframes pulsate {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.05);
+  }
+  100% {
+    transform: scale(1);
+  }
 }

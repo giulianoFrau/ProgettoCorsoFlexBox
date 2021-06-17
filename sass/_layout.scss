@@ -1,37 +1,55 @@
-.container{
-max-width: 120rem; //1200px ,quando diminuisce occupera il 100% della larghezza e non verrà "mangiato"
-margin: 8rem auto; //centrato a dx e sx e margine top di 8
-background-color: var(--color-grey-light-1); 
-box-shadow: var(--shadow-dark);
-min-height: 50rem;//1200px ,quando diminuisce occupera il 100% della larghezza
-
+.container {
+  max-width: 120rem; //1200px ,quando diminuisce occupera il 100% della larghezza e non verrà "mangiato"
+  margin: 8rem auto; //centrato a dx e sx e margine top di 8
+  background-color: var(--color-grey-light-1);
+  box-shadow: var(--shadow-dark);
+  min-height: 50rem; //1200px ,quando diminuisce occupera il 100% della larghezza
 }
 
-.header{
-height: 7rem;
-background-color: #fff;
-border-bottom: var(--color-grey-light-2); 
-display: flex;
-justify-content: space-between;
-align-items: center;
+.header {
+  height: 7rem;
+  background-color: #fff;
+  border-bottom: 1px solid var(--color-grey-light-2);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
-.content{
-display: flex; //padre
-
+.content {
+  display: flex; //padre
 }
 
-.sidebar{
-background-color: var(--color-grey-dark-1);
-flex:0 0 18%; //diciamo che la sidebar non cresce e non decrementa e che è larga 18%
-display: flex;
-flex-direction: column;
-justify-content: space-between;
-
+.sidebar {
+  background-color: var(--color-grey-dark-1);
+  flex: 0 0 18%; //diciamo che la sidebar non cresce e non decrementa e che è larga 18%
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
-.hotel-view{
+.hotel-view {
     height: 80rem;
-    background-color: #fff;
-    flex:1; //con flex 1 essa cresce di 1 andando a prendersi tutto lo spazio rimasto,ovvero l' 82% (100%-18 della sidebar)
+  background-color: #fff;
+  flex: 1; //con flex 1 essa cresce di 1 andando a prendersi tutto lo spazio rimasto,ovvero l' 82% (100%-18 della sidebar)
+}
+
+.detail {
+  display: flex;
+  padding: 4.5rem;
+  background-color: var(--color-grey-light-1);
+  border-bottom: 1px solid var(--color-grey-light-2);
+}
+
+.description {
+  font-size: 1.4rem;
+  background-color: white; 
+  padding: 3rem;
+  flex: 0 0 60%;
+  margin-right: 4.5rem;
+  
+}
+
+.user-reviews {
+  background-color: yellow;
+  flex: 1;
 }
